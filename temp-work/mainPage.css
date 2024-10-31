@@ -32,16 +32,17 @@
 }
 .container_container{
     display: flex;
-    position: absolute;
-    width: 50%;
-    height: 30%;
+    position: relative;
+    width: 70%;
+    height: 30vw;
     flex-direction: column;
-    
+    margin-top: 2em;
+    margin-bottom: 2em;
 }
+
 .container{
     display: flex;
     position: inherit;
-    padding: 1em solid black;
     border: 1em solid rgb(240, 208, 165);
     background-color: rgb(240, 208, 165);
     width: 100%;
@@ -67,6 +68,12 @@
     cursor: pointer;
 }
 
+.container1:active {
+    background-color: rgb(230, 150, 150); /*this is temporary for testing */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    transform: scale(1.02);
+}
+
 
 body{
     background-color: white;
@@ -86,16 +93,17 @@ body{
     height: 10%;
     width: 100%;
     margin: auto;
-    padding: auto;
-}
+    padding: auto;}
 
 .contentContainer{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     flex: 8.5;
-    height: 80%;
+    height: 100%;
     width: 70%;
+    overflow: auto;
 }
 
 .middle{
@@ -109,9 +117,12 @@ body{
     display: flex;
     position: relative;
     flex: 1.5;
-    height: 80%;
-    width: 30%;
+    height: 100%;
+    width: 20%;
     flex-direction: column;
+    border: 0.1em solid black;
+    border-bottom: 0;
+    background-color: rgb(216, 216, 216);
 }
 
 
@@ -124,15 +135,8 @@ h3{
 }
 
 h4{
-    margin-left: 2em;
-}
-
-
-
-ul{
-    display: flex;
-    flex-direction: column;
-    
+    margin-top: 1em;
+    font-size: 1.2em;
 }
 
 
@@ -149,4 +153,12 @@ button:hover{
     background-color: whitesmoke;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transform: scale(1.02);
+}
+
+.buttonAlignemt{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
 }
