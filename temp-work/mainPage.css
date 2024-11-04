@@ -1,4 +1,4 @@
-.content{
+.content {
     position: absolute;
     padding: 0%;
     width: 100%;
@@ -11,7 +11,7 @@
     align-content: center;
 }
 
-.header{
+.header {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -23,14 +23,15 @@
     padding: auto;
 }
 
-.title{
+.title {
     font-size: 2em;
     display: flex;
     justify-content: center;
     align-items: center;
     align-content: center;
 }
-.container_container{
+
+.container_container {
     display: flex;
     position: relative;
     width: 70%;
@@ -40,7 +41,7 @@
     margin-bottom: 2em;
 }
 
-.container{
+.container {
     display: flex;
     position: inherit;
     border: 1em solid rgb(240, 208, 165);
@@ -54,14 +55,15 @@
     gap: 1em;
 }
 
-.container1{
+.container1 {
     background-color: rgb(244, 207, 160);
     display: absolute;
     border: 0.1em solid black;
     aspect-ratio: 1/1;
     height: 90%;
 }
-.container1:hover{
+
+.container1:hover {
     background-color: rgb(240, 208, 165);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transform: scale(1.01);
@@ -69,13 +71,13 @@
 }
 
 .container1:active {
-    background-color: rgb(230, 150, 150); /*this is temporary for testing */
+    background-color: rgb(230, 150, 150);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
     transform: scale(1.02);
 }
 
 
-body{
+body {
     background-color: white;
     justify-content: center;
     align-items: center;
@@ -84,7 +86,7 @@ body{
     padding: 0;
 }
 
-.footer{
+.footer {
     display: flex;
     justify-content: left;
     align-items: center;
@@ -93,9 +95,10 @@ body{
     height: 10%;
     width: 100%;
     margin: auto;
-    padding: auto;}
+    padding: auto;
+}
 
-.contentContainer{
+.contentContainer {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -106,14 +109,14 @@ body{
     overflow: auto;
 }
 
-.middle{
+.middle {
     display: flex;
     flex-direction: row;
     width: 100%;
     height: 80%;
 }
 
-.nav{
+.nav {
     display: flex;
     position: relative;
     flex: 1.5;
@@ -126,7 +129,7 @@ body{
 }
 
 
-h3{
+h3 {
     font-size: 1.5em;
     display: flex;
     justify-content: center;
@@ -134,14 +137,14 @@ h3{
     align-content: center;
 }
 
-h4{
+h4 {
     margin-top: 1em;
     margin-left: 1em;
     font-size: 1.2em;
 }
 
 
-.sidebar{
+.sidebar {
     background-color: white;
     border: 0.1em solid black;
     padding: 0.5em;
@@ -150,13 +153,13 @@ h4{
     font-size: 1em;
 }
 
-button:hover{
+button:hover {
     background-color: whitesmoke;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transform: scale(1.02);
 }
 
-.buttonAlignemt{
+.buttonAlignemt {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -171,10 +174,10 @@ button:hover{
     justify-content: flex-start;
     align-items: center;
     width: 91%;
-    
+
 }
 
-.SButton{
+.SButton {
     height: 2em;
     font-size: 1em;
     border: 0;
@@ -183,13 +186,13 @@ button:hover{
     background-color: rgb(240, 208, 165);
 }
 
-.SButton:hover{
+.SButton:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transform: scale(1.02);
     cursor: pointer;
 }
 
-.mainText{
+.mainText {
     font-size: 1.5em;
     display: flex;
     justify-content: center;
@@ -198,7 +201,7 @@ button:hover{
     position: absolute;
 }
 
-.searchBar{
+.searchBar {
     width: 100%;
     font-size: 1em;
     height: 2em;
@@ -208,7 +211,7 @@ button:hover{
     margin-top: 1em;
 }
 
-.loginButton{
+.loginButton {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -223,7 +226,7 @@ button:hover{
     margin-top: 1em;
 }
 
-.cartButton{
+.kartButton {
     display: flex;
     justify-content: center;
     align-items: center;

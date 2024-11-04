@@ -1,92 +1,45 @@
 <?php
 
+use App\Livewire\AboutUs;
+use App\Livewire\AddCategory;
+use App\Livewire\AllProducts;
+use App\Livewire\Contacts;
+use App\Livewire\EditProduct;
+use App\Livewire\ManageOrders;
+use App\Livewire\ManageProduct;
+use App\Livewire\AddProductForm;
+use App\Livewire\AdminDashboard;
+use App\Livewire\ProductDetails;
+use App\Livewire\ManageCategories;
 use Illuminate\Support\Facades\Route;
+use App\Livewire\ShoppingKartComponent;
 
-Route::get("/the/meaning/of/life/the/universe/and/everythin{_}", function () {
-    return "42";
+Route::get('/', function () {
+    return view('welcome');
 });
 
-Route::get("/", function () {
-    return "Ignas";
-});
+Route::get('/product/{product_id}/details',ProductDetails::class);
 
-Route::get("/login", function () {
-    return "Arhanas";
-});
+Route::get('/all/products',AllProducts::class);
 
-Route::get("/register", function () {
-    return "Arhanas";
-});
+Route::get('/about',AboutUs::class);
 
-Route::get("/account", function () {
-    return "Arhanas";
-});
+Route::get('/contacts',Contacts::class);
 
-Route::get("/products/list", function () {
-    return "Ignas";
-});
+Route::get('/shopping-kart',ShoppingKartComponent::class)->name('shopping-kart');
 
-Route::get("/products/edit", function () {
-    return "Niconas";
-});
+Route::group(['middleware' => 'admin'], function(){
+    Route::get('/admin/dashboard', AdminDashboard::class)->name('dashboard');   
 
-Route::get("/kart", function () {
-    return "Gerardas";
-});
+    Route::get('/products',ManageProduct::class)->name('products');
 
-Route::get("/checkout", function () {
-    return "Gerardas";
-});
+    Route::get('/orders',ManageOrders::class)->name('orders');
 
-Route::get("/receipt", function () {
-    return "Gerardas";
-});
+    Route::get('/add/product', AddProductForm::class);
 
-Route::get("/error", function () {
-    return "Ignas";
-});
-
-//apis
-Route::get("/api/get-product", function () {
-    return "Niconas";
-});
-
-Route::get("/api/add-product", function () {
-    return "Niconas";
-});
-
-Route::get("/api/modify-product", function () {
-    return "Niconas";
-});
-
-Route::get("/api/remove-product", function () {
-    return "Niconas";
-});
-
-Route::get("/api/get_account", function () {
-    return "Justinas";
-});
-
-Route::get("/api/add_account", function () {
-    return "Justinas";
-});
-
-Route::get("/api/modify_account", function () {
-    return "Justinas";
-});
-
-Route::get("/api/remove_account", function () {
-    return "Justinas";
-});
-
-Route::get("/api/add-kart-item", function () {
-    return "Viktoras";
-});
-
-Route::get("/api/remove-kart-item", function () {
-    return "Viktoras";
-});
-
-Route::get("/api/get-kart-items", function () {
-    return "Viktoras";
+    Route::get('/manage/categories', ManageCategories::class);
+    //adding category form
+    Route::get('/add/category', AddCategory::class);
+    //editing products
+    Route::get('/edit/{id}/product', EditProduct::class);
 });
