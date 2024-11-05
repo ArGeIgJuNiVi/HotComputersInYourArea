@@ -9,7 +9,7 @@ return [
         'height' => '32',
     ],
     'background' => [
-        'color' => '#4549bf',
+        'color' => '#613583',
         'image' => '',
         'image_overlay_color' => '#000000',
         'image_overlay_opacity' => '0.5',
