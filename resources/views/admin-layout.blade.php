@@ -50,8 +50,8 @@
     <div class="relative flex flex-col h-full max-h-full">
       <div class="px-6 pt-4 ">
 
-        <a wire:navigate class="flex-none rounded-xl text-xl text-blue-600   inline-block font-semibold focus:outline-none focus:opacity-80" href="#" aria-label="E-commerce">
-          //LOGO HERE
+        <a wire:navigate class="flex-none rounded-xl text-xl text-blue-600   inline-block font-semibold focus:outline-none focus:opacity-80" href="#" aria-label="Hot Computers In Your Area">
+          <img src="images/HCA.png" alt="Logo" class="w-12 h-12 rounded-xl">
         </a>
 
       </div>

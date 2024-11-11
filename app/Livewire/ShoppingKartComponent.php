@@ -85,6 +85,6 @@ class ShoppingKartComponent extends Component
 
         return view('livewire.shopping-kart-component', [
             'kartItems' => $this->kartItems
-        ])->title('E-commerce | Shopping kart');
+        ])->title('Hot Computers In Your Area | Shopping kart');
     }
 }
