@@ -18,28 +18,28 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/product/{product_id}/details',ProductDetails::class);
+Route::get('/product/{product_id}/details', ProductDetails::class);
 
-Route::get('/all/products',AllProducts::class);
+Route::get('/all/products', AllProducts::class);
 
-Route::get('/about',AboutUs::class);
+Route::get('/about', AboutUs::class);
 
-Route::get('/contacts',Contacts::class);
+Route::get('/contacts', Contacts::class);
 
-Route::get('/shopping-kart',ShoppingKartComponent::class)->name('shopping-kart');
+Route::get('/shopping-kart', ShoppingKartComponent::class)->name('shopping-kart');
 
-Route::group(['middleware' => 'admin'], function(){
-    Route::get('/admin/dashboard', AdminDashboard::class)->name('dashboard');   
+Route::group(['middleware' => 'admin'], function () {
+    Route::get('/admin/dashboard', AdminDashboard::class)->name('dashboard');
 
-    Route::get('/products',ManageProduct::class)->name('products');
+    Route::get('/products', ManageProduct::class)->name('products');
 
-    Route::get('/orders',ManageOrders::class)->name('orders');
+    Route::get('/orders', ManageOrders::class)->name('orders');
 
     Route::get('/add/product', AddProductForm::class);
 
     Route::get('/manage/categories', ManageCategories::class);
-    //adding category form
+
     Route::get('/add/category', AddCategory::class);
-    //editing products
+
     Route::get('/edit/{id}/product', EditProduct::class);
 });

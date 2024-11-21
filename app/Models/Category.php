@@ -4,7 +4,9 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use ApiPlatform\Metadata\ApiResource;
 
+#[ApiResource(middleware: 'api')]
 class Category extends Model
 {
     use HasFactory;
@@ -16,7 +18,8 @@ class Category extends Model
         return $this->hasMany(Product::class);
     }
 
-    public function scopeSearch($query, $value){
-        $query->where('name','like',"%{$value}%");
+    public function scopeSearch($query, $value)
+    {
+        $query->where('name', 'like', "%{$value}%");
     }
 }
