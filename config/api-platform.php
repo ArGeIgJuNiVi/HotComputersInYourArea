@@ -1,6 +1,7 @@
 <?php
 
 use ApiPlatform\Metadata\UrlGeneratorInterface;
+use App\Http\Middleware\ApiMiddleware;
 use Illuminate\Auth\Access\AuthorizationException;
 use Illuminate\Auth\AuthenticationException;
 
@@ -11,7 +12,9 @@ return [
 
     'routes' => [
         // Global middleware applied to every API Platform routes
-        // 'middleware' => []
+        'middleware' => [
+            ApiMiddleware::class
+        ]
     ],
 
     'resources' => [
@@ -43,20 +46,20 @@ return [
         'pagination_enabled' => true,
         'pagination_partial' => false,
         'pagination_client_enabled' => false,
-		'pagination_client_items_per_page' => false,
-		'pagination_client_partial' => false,
-		'pagination_items_per_page' => 30,
-		'pagination_maximum_items_per_page' => 30,
+        'pagination_client_items_per_page' => false,
+        'pagination_client_partial' => false,
+        'pagination_items_per_page' => 30,
+        'pagination_maximum_items_per_page' => 30,
         'route_prefix' => '/api',
-        'middleware' => [],
+        'middleware' => 'api',
     ],
 
-	'pagination' => [
-		'page_parameter_name' => 'page',
-		'enabled_parameter_name' => 'pagination',
-		'items_per_page_parameter_name' => 'itemsPerPage',
-		'partial_parameter_name' => 'partial',
-	],
+    'pagination' => [
+        'page_parameter_name' => 'page',
+        'enabled_parameter_name' => 'pagination',
+        'items_per_page_parameter_name' => 'itemsPerPage',
+        'partial_parameter_name' => 'partial',
+    ],
 
     'graphql' => [
         'enabled' => false,
