@@ -1,4 +1,15 @@
 <header class="bg-white shadow-sm">
+  <style>
+  header {
+    position: fixed;
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    z-index: 1000
+    background-color: white;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); 
+  }
+  </style>
   <div class="mx-auto flex h-16 max-w-screen-xl items-center gap-8 px-4 sm:px-6 lg:px-8">
     <a class="block text-blue-600" href="#">
       <span class="sr-only">Home</span>

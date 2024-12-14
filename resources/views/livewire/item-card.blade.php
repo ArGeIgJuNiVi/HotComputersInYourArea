@@ -1,11 +1,48 @@
-<div class="bg-gray-100 shadow-sm rounded-lg hover:border border-blue-400 p-1">
+<div class="bg-gray-100 shadow-sm rounded-lg hover:border border-blue-400 p-1 item-card zoom-in">
+    <style>
+            .before-zoomin{
+                transform: scale(0, 0);
+            }
+            .zoom-in{
+            animation: zoom-in-zoom-out 1s ease forwards;
+
+            }
+            @keyframes zoom-in-zoom-out {
+            from {
+                opacity: 0;
+                clip-path: inset(100% 100% 0 0);
+            }
+            to {
+                opacity: 1;
+                clip-path: inset(0 0 0 0)
+            }
+            }
+            .item-card {
+                transition: transform 0.3s ease, max-height 0.3s ease;
+                overflow: hidden;
+            }
+    
+            .item-card:hover {
+                transform: scale(1.1);
+            }
+    
+            .item-card .description {
+                max-height: 1.5rem;
+                overflow: hidden;
+                transition: max-height 0.3s ease;
+            }
+    
+            .item-card:hover .description {
+                max-height: none;
+            }
+    </style>
     <a wire:navigate href="/product/{{$product->id}}/details">
         <div>
             <img src="{{ $product->image ? Storage::url($product->image) : asset('images/placeholder-image.jpg') }}" alt="product-images" class="rounded-t-lg object-cover w-full h-[180px]">
         </div>
         <div>
             <h2 class="line-clamp-1 px-3 font-medium">{{ $product->name }}</h2>
-            <h2 class="line-clamp-2 px-3">{{ $product->description }}</h2>
+            <h2 class="line-clamp-2 px-3 description">{{ $product->description }}</h2>
             <div class="flex justify-between px-3 py-2">
                 <div class="bg-green-200 p-1 rounded-md">
                     <h2 class="text-1xl">{{ $product->category->name }}</h2>
