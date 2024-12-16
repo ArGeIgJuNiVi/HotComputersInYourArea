@@ -69,14 +69,6 @@ return [
         'password_confirm' => 'Confirm Password',
         'button' => 'Reset Password',
     ],
-    'twoFactorChallenge' => [
-        'page_title' => 'Two Factor Challenge',
-        'headline_auth' => 'Authentication Code',
-        'subheadline_auth' => 'Enter the authentication code provided by your authenticator application.',
-        'show_subheadline_auth' => false,
-        'headline_recovery' => 'Recovery Code',
-        'subheadline_recovery' => 'Please confirm access to your account by entering one of your emergency recovery codes.',
-        'show_subheadline_recovery' => false,
-    ],
+
 
 ];
