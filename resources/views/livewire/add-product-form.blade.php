@@ -48,7 +48,7 @@
 							@endforeach
 							
 						</select>
-						@error('category_id') <span class="text-red-500">{{ $message }}</span> @enderror
+                        @error('category_id') <span class="text-red-500">{{ $message }}</span> @enderror
 					</div>
                 </div>
 
