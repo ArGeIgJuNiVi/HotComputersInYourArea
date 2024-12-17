@@ -20,7 +20,7 @@ Route::get('/', function () {
 
 Route::get('/product/{product_id}/details',ProductDetails::class);
 
-Route::get('/all/products',AllProducts::class);
+Route::get('/all/products/{category_id?}', AllProducts::class)->name('all.products');
 
 Route::get('/about',AboutUs::class);
 
@@ -38,8 +38,8 @@ Route::group(['middleware' => 'admin'], function(){
     Route::get('/add/product', AddProductForm::class);
 
     Route::get('/manage/categories', ManageCategories::class);
-    //adding category form
+
     Route::get('/add/category', AddCategory::class);
-    //editing products
+
     Route::get('/edit/{id}/product', EditProduct::class);
 });

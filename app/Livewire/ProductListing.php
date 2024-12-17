@@ -27,25 +27,17 @@ class ProductListing extends Component
 
     public function updateProductList()
     {
-        if ($this->category_id == 0) {
-            $this->products = Product::with('category')
-                ->where('id', '!=', $this->current_product_id)
-                ->where('name', 'like', '%' . $this->searchTerm . '%')
-                ->orderBy('created_at', 'DESC')
-                ->limit(4)
-                ->get();
-        } elseif ($this->category_id == 'all') {
-            $this->products = Product::with('category')
-                ->where('name', 'like', '%' . $this->searchTerm . '%')
-                ->get();
-        } else {
-            $this->products = Product::with('category')
-                ->where('category_id', $this->category_id)
-                ->where('id', '!=', $this->current_product_id)
-                ->where('name', 'like', '%' . $this->searchTerm . '%')
-                ->limit(4)
-                ->get();
+        $query = Product::with('category')
+            ->where('id', '!=', $this->current_product_id)
+            ->where('name', 'like', '%' . $this->searchTerm . '%');
+
+        if ($this->category_id == 0 || $this->category_id == 'all') {
+        } 
+        else {
+            $query->where('category_id', $this->category_id);
         }
+
+        $this->products = $query->orderBy('created_at', 'DESC')->get();
     }
 
     public function render()
@@ -55,4 +47,3 @@ class ProductListing extends Component
         ]);
     }
 }
-

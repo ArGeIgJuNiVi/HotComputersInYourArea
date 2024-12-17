@@ -37,8 +37,8 @@
                   ])
   
                   @include('livewire.theaders.th',[
-                    'name' => 'created_at', //column name from db
-                    'columnName' => 'Created', //display name
+                    'name' => 'created_at',
+                    'columnName' => 'Created', 
                   ])
                   <th scope="col" class="px-6 py-3 text-end"></th>
                   <th scope="col" class="px-6 py-3 text-end"></th>
