@@ -12,6 +12,7 @@ class ManageProduct extends Component
     {
         
         return view('livewire.manage-product')
-        ->layout('admin-layout');
+        ->layout('admin-layout')
+        ->layout('supplier-layout');
     }
 }

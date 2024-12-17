@@ -53,6 +53,8 @@ class EditProduct extends Component
     }
     public function render()
     {
-        return view('livewire.edit-product')->layout('admin-layout');
+        return view('livewire.edit-product')
+        // ->layout('admin-layout');
+        ->layout('supplier-layout');
     }
 }

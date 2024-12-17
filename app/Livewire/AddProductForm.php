@@ -55,5 +55,6 @@ class AddProductForm extends Component
 
         return view('livewire.add-product-form')
         ->layout('admin-layout');
+        // ->layout('supplier-layout');
     }
 }

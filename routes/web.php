@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Middleware\SupplierMiddleware;
 use App\Livewire\AboutUs;
 use App\Livewire\AddCategory;
 use App\Livewire\AllProducts;
@@ -41,5 +42,16 @@ Route::group(['middleware' => 'admin'], function(){
     //adding category form
     Route::get('/add/category', AddCategory::class);
     //editing products
+    Route::get('/edit/{id}/product', EditProduct::class);
+});
+
+Route::group(['middleware' => SupplierMiddleware::class], function(){   
+
+    Route::get('/products',ManageProduct::class)->name('products');
+
+    Route::get('/orders',ManageOrders::class)->name('orders');
+
+    Route::get('/add/product', AddProductForm::class);
+
     Route::get('/edit/{id}/product', EditProduct::class);
 });
