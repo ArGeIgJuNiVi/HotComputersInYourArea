@@ -1,6 +1,6 @@
 <div>
     <div class="flex gap-5 p-20">
-        <img src="{{ $product->image ? Storage::url($product->image) : asset('images/placeholder-image.jpg') }}" alt="product-images" class="rounded-t-lg object-cover w-[300px] h-[280px]">
+        <img src="{{ $product->image ? Storage::url($product->image) : asset('images/placeholder-image.jpg') }}"  class="rounded-t-lg object-cover w-[300px] h-[280px]">
         <div>
             <h2 class="p-1 font-medium text-2xl line-clamp-2">{{ $product->name }}</h2>
             <h2 class="p-1  text-gray-500 line-clamp-4">{{ $product->description }}</h2>

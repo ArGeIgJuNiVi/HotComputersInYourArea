@@ -38,7 +38,7 @@
     </style>
     <a wire:navigate href="/product/{{$product->id}}/details">
         <div>
-            <img src="{{ $product->image ? Storage::url($product->image) : asset('images/placeholder-image.jpg') }}" alt="product-images" class="rounded-t-lg object-cover w-full h-[180px]">
+            <img src="{{ $product->image ? Storage::url($product->image) : asset('images/placeholder-image.jpg') }}"  class="rounded-t-lg object-cover w-full h-[180px]">
         </div>
         <div>
             <h2 class="line-clamp-1 px-3 font-medium">{{ $product->name }}</h2>
